@@ -1,7 +1,7 @@
 version: '2'
 services:
   ghost:
-    image: "quay.io/danfercf/ghost-pvpgn-x64"
+    image: "quay.io/danfercf/ghost-pvpgn-x64:0.3.0"
     volumes:
       - /usr/local/ghost/maps:/usr/local/ghost/maps
       - /usr/local/ghost/replays:/usr/local/ghost/replays
@@ -29,8 +29,8 @@ services:
       AUTOHOST_OWNER: danfercf
       #MYSQL
       MYSQL_SERVER: 127.0.0.1
-      MYSQL_DB_NAME:
-      MYSQL_USER:
+      MYSQL_DB_NAME: ghost
+      MYSQL_USER: root
       MYSQL_PASSWORD:
       MYSQL_PORT: 3306
       #BNET
@@ -42,5 +42,12 @@ services:
       BNET_BOT_ADMIN: danfercf
       BNET_BOT_TRIGGER: .
     network_mode: host
-    container_name: ghost
+    container_name: ghost1
     command: ["./ghost.sh"]
+    restart: always
+    #links:
+      #- mysql:db
+networks:
+  default:
+    external:
+      name: pvpgn_default
