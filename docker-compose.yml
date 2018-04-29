@@ -41,6 +41,6 @@ services:
       BNET_BOT_CHANNEL: Bots
       BNET_BOT_ADMIN: danfercf
       BNET_BOT_TRIGGER: .
-    #network_mode: host
+    network_mode: host
     container_name: ghost
     command: ["./ghost.sh"]
