@@ -29,6 +29,6 @@ COPY ghost.cfg /usr/local/ghost
 COPY update_dota_elo.cfg /usr/local/ghost
 COPY update_w3mmd_elo.cfg /usr/local/ghost
 WORKDIR /usr/local/ghost
-EXPOSE 6114 6116 6117
+EXPOSE 6116
 COPY ghost.sh /usr/local/ghost
 RUN chmod +x /usr/local/ghost/ghost.sh
