@@ -1,11 +1,12 @@
 version: '2'
 services:
   ghost:
-      image: "quay.io/danfercf/ghost-pvpgn-x64"
-      volumes:
-        - /usr/local/ghost/maps:/usr/local/ghost/maps
-        - /usr/local/ghost/replays:/usr/local/ghost/replays
-        - /usr/local/ghost/mapcfgs:/usr/local/ghost/mapcfgs
+    image: "quay.io/danfercf/ghost-pvpgn-x64"
+    volumes:
+      - /usr/local/ghost/maps:/usr/local/ghost/maps
+      - /usr/local/ghost/replays:/usr/local/ghost/replays
+      - /usr/local/ghost/mapcfgs:/usr/local/ghost/mapcfgs
+    environment:
       #GENERAL
       BOT_HOST_PORT: 6116
       BOT_MAX_GAMES: 5
@@ -36,10 +37,10 @@ services:
       BNET_SERVER_HOST: lmkserver.zapto.org
       BNET_SERVER_ALIAS: LMK SERVER
       BNET_BOT_USERNAME: LMKBOT
-      BNET_BOT_PASSWORD: 123456
+      BNET_BOT_PASSWORD:
       BNET_BOT_CHANNEL: Bots
       BNET_BOT_ADMIN: danfercf
       BNET_BOT_TRIGGER: .
-    network_mode: host
+    #network_mode: host
     container_name: ghost
     command: ["./ghost.sh"]
