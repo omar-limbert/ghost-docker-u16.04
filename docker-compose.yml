@@ -26,7 +26,7 @@ services:
       AUTOHOST_MAX_GAMES: 5
       AUTO_HOST_PLAYERS: 10
       AUTOHOST_GAME_NAME: Nioje Asno
-      AUTOHOST_OWNER: danfercf
+      AUTOHOST_OWNER: oMy
       #MYSQL
       MYSQL_SERVER: 127.0.0.1
       MYSQL_DB_NAME: ghost
@@ -34,12 +34,12 @@ services:
       MYSQL_PASSWORD:
       MYSQL_PORT: 3306
       #BNET
-      BNET_SERVER_HOST: lmkserver.zapto.org
+      BNET_SERVER_HOST: 167.71.188.159
       BNET_SERVER_ALIAS: LMK SERVER
-      BNET_BOT_USERNAME: LMKBOT
-      BNET_BOT_PASSWORD:
+      BNET_BOT_USERNAME: omy-bot
+      BNET_BOT_PASSWORD: 12345
       BNET_BOT_CHANNEL: Bots
-      BNET_BOT_ADMIN: danfercf
+      BNET_BOT_ADMIN: oMy
       BNET_BOT_TRIGGER: .
     network_mode: host
     container_name: ghost1
