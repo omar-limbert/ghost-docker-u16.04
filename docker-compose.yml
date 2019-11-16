@@ -1,7 +1,7 @@
 version: '2'
 services:
   ghost:
-    image: "quay.io/danfercf/ghost-pvpgn-x64:0.3.0"
+    image: "ghost:latest"
     volumes:
       - /usr/local/ghost/maps:/usr/local/ghost/maps
       - /usr/local/ghost/replays:/usr/local/ghost/replays
